@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Password Encryption / Decryption</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+  </head>
+  <body>
+    <% if(error) {%>
+      <h1><font color='red'><%= error %></font></h1>
+    <% } %>
+    <h1>Password Encryption / Decryption</h1>
+    <p>
+      Input Password : <font color='green'><%= password %></font><br>
+      Salt : <font color='blue'><%= salt %></font><br>
+      <form action="/result" method="POST">
+        <input type="hidden" name="inputPassword" id="inputPassword" value="<%= password %>" >
+        <input type="hidden" name="salt" id="salt" value="<%= salt %>" >
+        <input type="checkPassword" id="checkPassword" name="checkPassword" placeholder="Password" required style="display: inline;">
+        <input type="submit" value="Check">
+      </form>
+    </p>
+  </body>
+</html>

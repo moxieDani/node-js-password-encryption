@@ -59,3 +59,17 @@ typings/
 
 # next.js build output
 .next
+
+# User exprienced files
+CVS
+.svn
+.hg
+.wafpickle-N
+.*.swp
+.DS_Store
+._*
+.npmrc
+config.gypi
+*.orig
+package-lock.json
+yarn.lock
